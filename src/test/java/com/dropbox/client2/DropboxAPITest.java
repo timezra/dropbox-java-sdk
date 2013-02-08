@@ -50,6 +50,9 @@ import com.dropbox.client2.exception.DropboxServerException;
 import com.dropbox.client2.session.AppKeyPair;
 import com.dropbox.client2.session.Session.AccessType;
 import com.dropbox.client2.session.WebAuthSession;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -64,7 +67,8 @@ public class DropboxAPITest {
     private File song = new File("testfiles", "dropbox_song.mp3");
     private File frog = new File("testfiles", "Costa Rican Frog.jpg");
 
-    static {
+    @BeforeClass
+    public static void beforeClass() {
         try {
             AppKeyPair consumerTokenPair = new AppKeyPair(System.getProperty("app_key"), System.getProperty("app_secret"));
             WebAuthSession session = new WebAuthSession(consumerTokenPair, AccessType.APP_FOLDER);
@@ -74,6 +78,20 @@ public class DropboxAPITest {
             t.printStackTrace();
             assert false : "Total failure trying to start WebAuthSession." + t;
         }
+    }
+    
+    @AfterClass
+    public static void afterClass() {
+    	try {
+			api.delete(TESTS_DIR);
+		} catch (DropboxException e) {
+			e.printStackTrace();
+		}
+    	try {
+			api.delete(TESTS_DIR + "createdFolder");
+		} catch (DropboxException e) {
+			e.printStackTrace();
+		}
     }
 
     public void assertFile(Entry e, File f, String path){
