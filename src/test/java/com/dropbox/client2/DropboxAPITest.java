@@ -28,6 +28,8 @@ package com.dropbox.client2;
 import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -315,6 +317,13 @@ public class DropboxAPITest {
 
         assertEquals(results.size(), 3);
 
+        // The ordering of returned search results is non-deterministic, so ensure an ordering
+        Collections.sort(results, new Comparator<Entry>() {
+			@Override
+			public int compare(Entry e1, Entry e2) {
+				return e1.path.compareTo(e2.path);
+			}
+		});
         assertFile(results.get(0), frog, searchDir + "frog.jpg");
         assertFile(results.get(1), frog, searchDir + "frog2.jpg");
         assertFile(results.get(2), frog, searchDir + "subFolder/frog2.jpg");
