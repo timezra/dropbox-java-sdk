@@ -1,7 +1,7 @@
 dropbox-java-sdk
 ====================================================
 
-This project started life as a fork of the dropbox-java-sdk v1.5.3 (https://www.dropbox.com/developers/reference/sdk) in order to install push the dropbox code into a local Maven repository for use in a Maven Dropbox plugin. None of the main java code has been touched, except for the pom.xml, which had gotten out of synch with the dependencies in the rest of the project and the DropboxAPITest#search method, which sporadically fails because of an assumption about the ordering of returned search results (see https://forums.dropbox.com/topic.php?id=96439&replies=1#post-526540).
+This project started life as a fork of the dropbox-java-sdk v1.5.3 (https://www.dropbox.com/developers/reference/sdk) in order to install the dropbox code into a local Maven repository for use in a Maven Dropbox plugin. None of the main java code has been touched, except for the pom.xml, which had gotten out of synch with the dependencies in the rest of the project and the DropboxAPITest#search method, which sporadically fails because of an assumption about the ordering of returned search results (see https://forums.dropbox.com/topic.php?id=96439&replies=1#post-526540).
 
 System properties for running integration tests
 ----------------------------------------------------
