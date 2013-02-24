@@ -1,0 +1,25 @@
+---
+language: java
+script: mvn -Dapp_key=$APP_KEY -Dapp_secret=$APP_SECRET -Daccess_key=$ACCESS_KEY -Daccess_secret=$ACCESS_SECRET install
+env:
+  matrix:
+  - secure: ! 'BE/shI7dS0R6MfBQSq1MCaHjtsX9n8+Ex/dHNnstpbTy4nP1cBXcXsvIe5JW
+
+      qiNNGc47bSvGySNvakQTfeo0/4Wi96dRrU3y9GPwci1MwiZovBwwVeCvYDJT
+
+      YXJtR1tOG/8i9AmXcQ38lJ1ae0btfIRzzWejjktO+scmsWYRhuU='
+  - secure: ! 'DQxTrjB864EcLO0koYC2X4Rt1VxdYq7CRIul7y2L1OxWaLtRBqLv/y/d8HL3
+
+      nvL04UOZrFqmDnsYgtBC9bpzOQA0BfLrTZzdhVcB7VugtkZ6rczKtZKvk8Px
+
+      zy+9jwEDDQmdW3csJzmZOFyoQdzghvQAKi1SrePf/1ZzzD1QFsQ='
+  - secure: ! 'ETxVfkLidk3GlQCheXBDwrbgrolnYVRJM61brqLX1CCO3dumg/3hD+onV9m5
+
+      Lqx+k+z3R3rwd1ozThcEkqgYDsaP7eMVpaTghOZBLsNI25Czq3FTuBwpVv+R
+
+      MWZ6tySYYa7Qn3jdje6gXqHKDbywCTFvLfjPyVy5L42gKeN/Hdk='
+  - secure: ! 'GFIADxd8DTBfx3h5RS9OEWmEzjVvVr5BEeLavPbOXXHT87sfVuqiW9h7Dk2g
+
+      WdhLDaBK7PnfpLqYkcZMzBiIsohAvzBZHJ6QobmvQT/LPaCvwiVYgxcB/29T
+
+      SvA2g4/lQ8Ukmxm/iupGR1xHcXzBItAdhWPNBgjAEQR4LcF6MlA='
