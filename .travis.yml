@@ -2,7 +2,7 @@
 language: java
 script: mvn -Dapp_key=$APP_KEY -Dapp_secret=$APP_SECRET -Daccess_key=$ACCESS_KEY -Daccess_secret=$ACCESS_SECRET install
 env:
-  matrix:
+  global:
   - secure: ! 'BE/shI7dS0R6MfBQSq1MCaHjtsX9n8+Ex/dHNnstpbTy4nP1cBXcXsvIe5JW
 
       qiNNGc47bSvGySNvakQTfeo0/4Wi96dRrU3y9GPwci1MwiZovBwwVeCvYDJT
