@@ -1,6 +1,18 @@
 dropbox-java-sdk
 ====================================================
 
+<div style="color: red;font-weight: bold; font-style: italic">This project is now deprecated since more recent versions of the dropbox-java-sdk are available in the maven central repository. Please, use one of those versions instead!</div>
+
+<code lang="xml">
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;com.dropbox.core&lt;/groupId&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;dropbox-core-sdk&lt;/artifactId&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;1.7.2&lt;/version&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;<br/>
+</code>
+
+----------------------------------------------------
+
 This project started life as a fork of the dropbox-java-sdk v1.5.3 (https://www.dropbox.com/developers/reference/sdk) in order to install the Dropbox code into a local Maven repository for use in a Maven Dropbox plugin. None of the main java code has been touched, except for the pom.xml, which had gotten out of synch with the dependencies in the rest of the project; the DropboxAPITest#search method, which sporadically fails because of an assumption about the ordering of returned search results (see https://forums.dropbox.com/topic.php?id=96439&replies=1#post-526540); and the mechanism for setting up and tearing down test data in DropboxAPITest, which does not clean up artifacts uploaded to the Dropbox integration test repository.
 
 System properties for running integration tests
